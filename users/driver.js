@@ -1,9 +1,23 @@
+const { Vehicle } = require("../vehicle.js");
 let {User} = require("./user.js");
-let {individualRide, sharedRides} = require("../rideBehaviours/index.js")
 
 class Driver extends User {
     constructor(){
+        super();
+        this.userId = ++Driver.UserId;
+    }
 
+    static UserId = 0;
+
+    addUser = function(userName, location, phoneNumber, vehicleNo, vehicleType){ //super concept
+        console.log("reaching")
+        // let user = new User();
+        this.userName = userName;
+        this.location = location;
+        this.phoneNumber = phoneNumber;
+        // let vehicle = new Vehicle();
+        this.vehicle = Vehicle.addVehicle(vehicleNo, vehicleType);
+        return this;
     }
 
     acceptPassengerRequest = function(vehicleId, passengerId){
@@ -11,7 +25,7 @@ class Driver extends User {
     }
 
     offerRide = function(vehicleId){
-        individualRide.offerRide(vehicleId);
+        // individualRide.offerRide(vehicleId);
         //search for passengers in locality
     }
 
@@ -25,3 +39,5 @@ class Driver extends User {
 
 
 }
+
+module.exports.Driver = Driver;

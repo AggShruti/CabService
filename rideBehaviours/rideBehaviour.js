@@ -7,3 +7,5 @@ class RideBhaviour{
         
     }
 }
+
+module.exports.RideBhaviour = RideBhaviour;

@@ -1,3 +1,6 @@
+let {RideBhaviour} = require("./rideBehaviour");
+
+
 class SharedRide extends RideBhaviour{
     constructor(){
 
@@ -9,3 +12,5 @@ class SharedRide extends RideBhaviour{
 
 
 }
+
+module.exports.SharedRide = SharedRide;

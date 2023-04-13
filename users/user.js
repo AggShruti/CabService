@@ -1,32 +1,27 @@
+
 class User{
     
-    constructor(userId, userName, location){
-        this.constants = require("../constants").data;
-        if(userId){
-            this.getUsers()
-        }
+    constructor( ){
+        
+    }
+    
+    addUser = function(userName, location, phoneNumber){
+        // let user = new User();
         this.userName = userName;
         this.location = location;
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+    get getUserName(){
+        return this.userName;
     }
 
-    addUser = function(userName, location){
-        
-        let userId = this.constants.numberOfUsers.length;
-        let user = {
-            userId,
-            userName,
-            location
-        }
-        this.constants.numberOfUsers.length += 1;
-        users.push(user);
-    }
-
-    removeUser = function(userId){
-        this.constants.users = this.constants.users.filter((user)=> user.userId!= userId);
-        return "Success";
-    }
-    getUsers = function(){
-        return this.constants.users;
+    get getLocation(){
+        return this.location;
     }
 
 }
+
+module.exports = {
+    User : User
+};
