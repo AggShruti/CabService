@@ -1,6 +1,6 @@
 class RideBhaviour{
-    constructor(){
-
+    constructor(isAvailbale){
+        this.isAvailbale = isAvailable || true;
     }
 
     offerRide = function(){

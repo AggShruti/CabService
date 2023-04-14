@@ -1,13 +1,12 @@
 const { Vehicle } = require("../vehicle.js");
 let {User} = require("./user.js");
+let {Ride} = require("../ride.js");
 
 class Driver extends User {
     constructor(){
         super();
-        this.userId = ++Driver.UserId;
     }
 
-    static UserId = 0;
 
     addUser = function(userName, location, phoneNumber, vehicleNo, vehicleType){ //super concept
         console.log("reaching")
@@ -24,7 +23,10 @@ class Driver extends User {
         //
     }
 
-    offerRide = function(vehicleId){
+    offerRide = function(source, destination){
+
+        let rideDetails = Ride.createRide(this.vehicle, source ,destination);
+        return rideDetails;
         // individualRide.offerRide(vehicleId);
         //search for passengers in locality
     }

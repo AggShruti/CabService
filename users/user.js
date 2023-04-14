@@ -2,9 +2,9 @@
 class User{
     
     constructor( ){
-        
+        this.userId = ++User.UserId;
     }
-    
+    static UserId = 0;
     addUser = function(userName, location, phoneNumber){
         // let user = new User();
         this.userName = userName;

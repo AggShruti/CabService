@@ -10,7 +10,6 @@ class SharedRide extends RideBhaviour{
         //add passenger to vehicle
     }
 
-
 }
 
 module.exports.SharedRide = SharedRide;

@@ -7,3 +7,5 @@ class IndividualRide extends RideBhaviour {
         
     }
 }
+
+module.exports.IndividualRide = IndividualRide;
